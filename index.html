@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> SmileDentmx</title>
-    <meta name="description" content="Consultorio dental en México especializado en limpieza dental, ortodoncia, carillas, implantes dentales y blanqueamiento. Agenda tu cita con los mejores dentistas en CDMX.">
-    <meta name="keywords" content="dentista, consultorio dental, México, CDMX, limpieza dental, ortodoncia, carillas, implantes dentales, blanqueamiento dental, odontología, clínica dental, tratamientos dentales">
+    <meta name="description" content="Consultorio dental en México especializado en limpieza dental, ortodoncia, carillas, implantes dentales y blanqueamiento. Agenda tu cita.">
+    <meta name="keywords" content="dentista, consultorio dental, México, CDMX, limpieza dental, ortodoncia, carillas, implantes dentales,implantes, blanqueamiento dental, odontología, clínica dental, tratamientos dentales">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#equipo">Nuestro Equipo</a></li>
+                <!-- <li><a href="#equipo"> Nuestro Equipo</a></li> -->
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
             </ul>
@@ -25,26 +25,66 @@
             <h2>Dentista en México: Tu sonrisa en las mejores manos</h2>
             <p>En <strong>SmileDentmx</strong> somos un <strong>consultorio dental en México</strong> especializado en <strong>tratamientos dentales</strong> como <strong>limpieza dental</strong>, <strong>ortodoncia</strong>, <strong>carillas</strong>, <strong>implantes dentales</strong> y <strong>blanqueamiento dental</strong>. Nuestro equipo de <strong>dentistas certificados</strong> en CDMX te ofrece atención personalizada y tecnología de vanguardia para cuidar tu salud bucal.</p>
         </section>
+        <section id="promotions">
+        <h2>Promociones Vigentes</h2>
+        <div id="carousel">
+            <div id="slides">
+                <img src="PromoAgostoF.png" alt="Promoción 1">
+                <img src="PromoAgostoF.png" alt="Promoción 2">
+                <img src="PromoAgostoF.png" alt="Promoción 3">
+            </div>
+        </div>
+        <div class="dots">
+            <span class="active" onclick="currentSlide(0)"></span>
+            <span onclick="currentSlide(1)"></span>
+            <span onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dots span');
+        const totalSlides = dots.length;
+
+        function showSlide(index) {
+            slideIndex = index;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        setInterval(nextSlide, 3000);
+    </script>
         <section id="servicios">
             <h2>Servicios Dentales</h2>
             <ul>
                 <li>Limpieza dental profesional</li>
-                <li>Ortodoncia (brackets y alineadores invisibles)</li>
+                <!-- <li>Ortodoncia (brackets y alineadores invisibles)</li> -->
                 <li>Carillas estéticas</li>
                 <li>Implantes dentales</li>
                 <li>Blanqueamiento dental</li>
                 <li>Extracciones y cirugías dentales</li>
-                <li>Odontopediatría</li>
+                <!-- <li>Odontopediatría</li> -->
                 <li>Resinas y restauraciones</li>
             </ul>
         </section>
-        <section id="equipo">
+        <!-- <section id="equipo">
             <h2>Nuestro Equipo de Dentistas</h2>
             <p>Contamos con <strong>odontólogos certificados</strong> y especialistas en cada área de la <strong>odontología</strong>, comprometidos con tu bienestar y una atención de calidad.</p>
-        </section>
+        </section> -->
         <section id="contacto">
             <h2>Agenda tu cita</h2>
-            <p>¿Buscas un <strong>dentista en México</strong>? Agenda tu cita llamando al <a href="tel:+525512345678">55 1234 5678</a> o visítanos en CDMX. También puedes escribirnos a <a href="mailto:contacto@smiledentmx.com">contacto@smiledentmx.com</a>.</p>
+            <p>¿Buscas un <strong>dentista en CDMX</strong>? Agenda tu cita llamando al <a href="tel:+525552527149">55 5252 7149</a> o visítanos en CDMX. También puedes escribirnos a <a href="mailto:contacto@smiledentmx.com">contacto@smiledentmx.com</a>.</p>
         </section>
         <section id="ubicacion">
             <h2>¿Dónde estamos?</h2>

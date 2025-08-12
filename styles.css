@@ -67,6 +67,51 @@
         box-shadow: var(--shadow);
     }
 
+    .promotions {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+
+    iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+    }
+    .carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+    }
+    .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+            width: 100%;
+            border-radius: 8px;
+    }
+    .dots {
+            text-align: center;
+            margin-top: 10px;
+    }
+    .dots span {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+    }
+    .dots .active {
+            background-color: #0077b6;
+    }    
     section {
         margin-bottom: 2.5rem;
         padding: 1.5rem 1rem;
@@ -113,7 +158,7 @@
     }
 
     strong {
-        color: var(--secondary);
+        color: var(--primary);
     }
 
     footer {
